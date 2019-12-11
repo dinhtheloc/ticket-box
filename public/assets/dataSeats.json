@@ -100,5 +100,311 @@
                 "available": true
             }
         ]
+    },
+    {
+        "name": "C",
+        "data": [
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": false
+            }
+            ,
+            {
+                "type": "standard",
+                "available": false
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+        ]
+    },
+    {
+        "name": "D",
+        "data": [
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+        ]
+    },
+    {
+        "name": "E",
+        "data": [
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": false
+            }
+            ,
+            {
+                "type": "standard",
+                "available": false
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+        ]
+    },
+    {
+        "name": "F",
+        "data": [
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+        ]
+    },
+    {
+        "name": "G",
+        "data": [
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": false
+            }
+            ,
+            {
+                "type": "standard",
+                "available": false
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+        ]
+    },
+    {
+        "name": "H",
+        "data": [
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+        ]
     }
 ]

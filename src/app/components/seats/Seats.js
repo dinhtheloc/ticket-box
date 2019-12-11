@@ -3,7 +3,6 @@ import Seat from './seat/Seat';
 import './Seats.scss'
 
 class Seats extends React.Component {
-
     constructor(props) {
         super(props)
     }
@@ -16,12 +15,14 @@ class Seats extends React.Component {
             return <div>Loading...</div>;
         } else {
             return (
-                <div>
+                <div className="seats">
                     {
+                        
                         data.map((items, key1) => {
-                            
+                            console.log('123')
                             return (
                                 <div className="seats" key={items.name}>
+                                    <div className="row-name">{items.name}</div>
                                     {
                                         items['data'].map((item, key2) => {
                                             const available = item.available ? 'available' : 'not-available';
@@ -30,6 +31,7 @@ class Seats extends React.Component {
                                             return (
                                                 <Seat
                                                     key1={key1}
+                                                    row={items.name}
                                                     key2={key2}
                                                     clicked={item.available}
                                                     onClick={onItemClick}
@@ -38,7 +40,6 @@ class Seats extends React.Component {
                                             )
                                         })
                                     }
-
                                 </div>
                             )
                         })

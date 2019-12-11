@@ -1,3 +1,10 @@
 .seats {
     margin-bottom: 1rem;
+    .row-name {
+        position: absolute;
+        top: 50%;
+        left: 3%;
+        transform: translate(0%, -50%);
+        font-size: 25px;
+    }
 }

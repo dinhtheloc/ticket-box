@@ -1,5 +1,5 @@
 .container {
-    width: 1000px;
+    width: 768px;
     margin: 0 auto;
 }
 
@@ -18,13 +18,26 @@
 
 .screen {
     width: 100%;
-    height: 150px;
+    height: 50px;
     background: #ECE9E6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 10px;
     margin-bottom: 1rem;
+    color: #f38181;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    .text-error {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
 }
+
+
 
 
 .seats {
@@ -56,5 +69,138 @@
 
     .seat-item:last-child {
         margin: 0;
+    }
+}
+
+.seats {
+    margin-bottom: 1rem;
+}
+
+.note {
+    display: flex;
+    .child {
+        flex: 1;
+    }
+    .col-1 {
+        .box-1 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: #232526;
+            
+        }
+
+        .box-2 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: #ECE9E6;
+            
+        }
+        p {
+            display: inline-block;
+            margin-left: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        div {
+            vertical-align: middle;
+        }
+    }
+    .col-2 {
+        .box-1 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid #fce38a;
+            background: #000;
+            
+        }
+
+        .box-2 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid #f38181;
+            background: #000;
+            
+        }
+
+        .box-3 {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            border: 1px solid #95e1d3;
+            background: #000;
+            
+        }
+        p {
+            display: inline-block;
+            margin-left: 10px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+        div {
+            vertical-align: middle;
+        }
+    }
+
+    .col-3 {
+        text-align: center;
+        .total {
+            margin: 0;
+        }
+
+        .currency {
+            font-size: 16px;
+        }
+
+        .icon-info {
+            height: 25px;
+            margin-left: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover {
+                transform: translateY(-5px);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.button {
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    color: #fff!important;
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 700;
+    border: 0;
+    border-radius: 8px;
+    white-space: nowrap;
+    padding: 1rem 1.5rem;
+    line-height: 1.4;
+    text-align: center;
+    -webkit-transition: .07s;
+    transition: .07s;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+        transform: translateY(1px);
+    }
+}
+
+.checkout {
+    text-align: center;
+    .button {
+        margin: 10px;
     }
 }
