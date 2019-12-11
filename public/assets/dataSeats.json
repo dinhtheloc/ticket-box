@@ -1,0 +1,104 @@
+[
+    {
+        "name": "A",
+        "data": [
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": true
+            },
+            {
+                "type": "standard",
+                "available": false
+            }
+            ,
+            {
+                "type": "standard",
+                "available": false
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+        ]
+    },
+    {
+        "name": "B",
+        "data": [
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            },
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "vip",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+            ,
+            {
+                "type": "deluxe",
+                "available": true
+            }
+        ]
+    }
+]

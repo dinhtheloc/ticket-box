@@ -1,0 +1,17 @@
+.seat-item {
+    transition: all 0.2s;
+    background: transparent;
+    &.available:hover {
+        transform: translateY(-5px);
+        cursor: pointer;
+    }
+    &.choose {
+        background: #ECE9E6;  /* fallback for old browsers */
+    }
+    &.not-available {
+        border: none !important;
+        background: #232526;
+    }
+    
+}
+
