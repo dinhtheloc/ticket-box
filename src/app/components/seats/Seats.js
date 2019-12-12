@@ -1,5 +1,6 @@
 import React from 'react';
 import Seat from './seat/Seat';
+import IconZoom from './icon-zoom/IconZoom';
 import './Seats.scss'
 
 class Seats extends React.Component {
@@ -8,18 +9,24 @@ class Seats extends React.Component {
     }
 
     render() {
-        const { error, isLoaded, data, onItemClick } = this.props;
+        const {
+            error,
+            isLoaded,
+            data,
+            onItemClick,
+            icon,
+            onExpandClick,
+            isExpand
+        } = this.props;
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
             return (
-                <div className="seats">
+                <div className={`seats ${isExpand ? 'expand' : ''}`}>
                     {
-                        
                         data.map((items, key1) => {
-                            console.log('123')
                             return (
                                 <div className="seats" key={items.name}>
                                     <div className="row-name">{items.name}</div>
@@ -27,7 +34,6 @@ class Seats extends React.Component {
                                         items['data'].map((item, key2) => {
                                             const available = item.available ? 'available' : 'not-available';
                                             const choose = item.choose ? 'choose' : '';
-                                            console.log('123')
                                             return (
                                                 <Seat
                                                     key1={key1}
@@ -44,6 +50,7 @@ class Seats extends React.Component {
                             )
                         })
                     }
+                    <IconZoom onExpandClick={onExpandClick} icon={icon}></IconZoom>
                 </div>
             );
         }

@@ -2,7 +2,8 @@ import React from 'react';
 import Seats from '../../components/seats/Seats';
 
 import info from './info-button.svg';
-
+import expand from './expand.svg';
+import shrink from './shrink.svg';
 import './BookTicket.scss';
 
 
@@ -14,7 +15,9 @@ class BookTicket extends React.Component {
       isLoaded: false,
       error: null,
       countItem: 0,
-      validateMsg: null
+      validateMsg: null,
+      isExpand: false,
+      totalAmount: 0
     };
   }
 
@@ -43,16 +46,20 @@ class BookTicket extends React.Component {
       )
   }
   handleChoose = (key1, key2) => {
-    let { data, countItem, validateMsg } = this.state;
+    let { data, countItem, validateMsg, totalAmount } = this.state;
     const { available, choose } = data[key1]['data'][key2];
     if ((available && countItem < 6) || choose) {
       data[key1]['data'][key2]['choose'] = !choose;
+      const type = data[key1]['data'][key2]['type'];
+      const price = this.mappingType(type);
       if (choose) {
         countItem--;
+        totalAmount-= price;
       } else {
         countItem++;
+        totalAmount+= price;
       }
-      this.setState({ data, countItem });
+      this.setState({ data, countItem, totalAmount });
     } else if (countItem >= 6 && validateMsg === null) {
       validateMsg = 'Một người chỉ được chọn tối đa 6 ghế.';
       this.setState({ validateMsg }, () => {
@@ -63,9 +70,38 @@ class BookTicket extends React.Component {
       });
     }
   }
+  handleExpand = () => {
+    let { isExpand } = this.state;
+    isExpand = !isExpand;
+    this.setState({ isExpand });
+  }
+
+  mappingType(type) {
+    switch (type) {
+      case 'standard':
+        return 60000;
+      case 'deluxe':
+        return 90000;
+      case 'vip':
+        return 110000;
+    }
+  }
+
+  formatCurrency(amount) {
+    return amount.toLocaleString('it-IT', {currency : 'VND'});
+  }
 
   render() {
-    const { data, error, isLoaded, validateMsg } = this.state;
+    const {
+      data,
+      error,
+      isLoaded,
+      validateMsg,
+      isExpand,
+      totalAmount
+    } = this.state;
+    const amountVND = this.formatCurrency(totalAmount);
+    console.log(amountVND);
     return (
       <div className="container">
         <div className="header">
@@ -81,9 +117,12 @@ class BookTicket extends React.Component {
 
         <Seats
           onItemClick={this.handleChoose}
+          onExpandClick={this.handleExpand}
           data={data}
           error={error}
           isLoaded={isLoaded}
+          icon={isExpand ? expand : shrink}
+          isExpand={isExpand}
         ></Seats>
 
         <div className="note">
@@ -107,7 +146,7 @@ class BookTicket extends React.Component {
             </div>
           </div>
           <div className="child col-3">
-            <h1 className="total">180.000 <span className="currency">đ</span><img className="icon-info" src={info} alt="info" ></img></h1>
+            <h1 className="total">{amountVND} <span className="currency">đ</span><img className="icon-info" src={info} alt="info" ></img></h1>
             <p>CGV Crescent Mall</p>
             <p>09:10-11:10 | 08/07/2019</p>
           </div>

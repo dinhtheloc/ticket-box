@@ -2,6 +2,9 @@
     position: relative;
     transition: all 0.2s;
     background: transparent;
+    
+    display: inline-block;
+    margin-right: 10px;
     &.available:hover {
         transform: translateY(-5px);
         cursor: pointer;
@@ -20,6 +23,25 @@
         transform: translate(-50%,-50%);
         color: #232526;
         font-size: 12px;
+    }
+
+    &.standard{ 
+        border: 1px solid #fce38a;
+        border-radius: 8px;
+    }
+
+    &.vip {
+        border: 1px solid #f38181;
+        border-radius: 8px;
+    }
+
+    &.deluxe {
+        border: 1px solid #95e1d3;
+        border-radius: 8px;
+    }
+
+    &:last-child {
+        margin: 0;
     }
     
 }
