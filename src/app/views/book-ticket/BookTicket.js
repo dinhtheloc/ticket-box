@@ -76,7 +76,7 @@ class BookTicket extends React.Component {
     this.setState({ isExpand });
   }
 
-  mappingType(type) {
+  mappingType = (type) => {
     switch (type) {
       case 'standard':
         return 60000;
@@ -87,8 +87,13 @@ class BookTicket extends React.Component {
     }
   }
 
-  formatCurrency(amount) {
+  formatCurrency = (amount) => {
     return amount.toLocaleString('it-IT', {currency : 'VND'});
+  }
+
+  handleClick = (e) => {
+    e.preventDefault();
+    console.log(this.state);
   }
 
   render() {
@@ -101,7 +106,6 @@ class BookTicket extends React.Component {
       totalAmount
     } = this.state;
     const amountVND = this.formatCurrency(totalAmount);
-    console.log(amountVND);
     return (
       <div className="container">
         <div className="header">
@@ -153,10 +157,10 @@ class BookTicket extends React.Component {
         </div>
 
         <div className="checkout">
-          <a href="void()" className="button" >
+          <a href="#" onClick={this.handleClick} className="button" >
             Chọn combo
           </a>
-          <a href="void()" className="button" >
+          <a href="#" onClick={this.handleClick}  className="button" >
             Thanh toán
           </a>
         </div>

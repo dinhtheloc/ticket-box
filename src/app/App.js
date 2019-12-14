@@ -8,14 +8,11 @@ import BookTicket from './views/book-ticket/BookTicket';
 function App() {
   return (
     <div>
-
       <div className="App-intro">
-        <Route path='/home' exact component={Home} />
         <Route path='/booking' component={BookTicket} />
         <Redirect to='/booking' />
       </div>
       <div className="footer">
-        
       </div>
     </div>
   );
